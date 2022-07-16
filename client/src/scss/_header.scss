@@ -1,0 +1,16 @@
+header {
+    @include flex(space-between);
+    padding: 1rem 4rem;
+    height: $header-height;
+    background-color: white;
+    box-shadow: 0 2px 4px hsl(0, 0%, 85%);
+
+    .logo {
+        color: $primary-color;
+        cursor: pointer;
+    }
+
+    .btn-group {
+        @include flex($gap: 1rem);
+    }
+}

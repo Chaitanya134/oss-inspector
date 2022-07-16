@@ -1,0 +1,148 @@
+.login-wrapper {
+    @include flex;
+    height: calc(100vh - $header-height);
+    width: 100%;
+}
+
+.login-form {
+    @include flex($gap: 1rem, $col: true);
+    align-items: initial;
+    height: 450px;
+    width: 400px;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: white;
+    box-shadow: 0 0 1rem hsl(0, 0%, 90%);
+
+    &-title {
+        position: relative;
+        width: fit-content;
+        margin-bottom: 1rem;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -4px;
+            left: 2px;
+            height: 0.25rem;
+            width: 35%;
+            background-color: $primary-color;
+        }
+    }
+
+    .form-group {
+        @include flex($pos: null, $gap: 0.25rem, $col: true);
+        align-items: initial;
+    }
+
+    label {
+        font-weight: 500;
+    }
+
+    input {
+        --placeholder-color: hsl(235, 13%, 65%);
+        padding: 0.65em 0.8em;
+        padding-right: 2em;
+        font-size: 1rem;
+        outline: none;
+        border: 2px solid transparent;
+        border-radius: 0.3rem;
+        background-color: hsl(200, 33%, 96%);
+        transition: 0.2s ease-in-out;
+
+        &:focus {
+            border-color: $secondary-color;
+            background-color: white;
+        }
+
+        /* do not group these rules */
+        &::-webkit-input-placeholder {
+            color: var(--placeholder-color);
+        }
+
+        &:-moz-placeholder {
+            /* FF 4-18 */
+            color: var(--placeholder-color);
+            opacity: 1;
+        }
+
+        &::-moz-placeholder {
+            /* FF 19+ */
+            color: var(--placeholder-color);
+            opacity: 1;
+        }
+
+        &:-ms-input-placeholder {
+            /* IE 10+ */
+            color: var(--placeholder-color);
+        }
+
+        &::-ms-input-placeholder {
+            /* Microsoft Edge */
+            color: var(--placeholder-color);
+        }
+
+        &::placeholder {
+            /* modern browser */
+            color: var(--placeholder-color);
+        }
+    }
+
+    .password-icon {
+        @include flex;
+        position: absolute;
+        bottom: calc(0.5rem + 0.65em / 2);
+        right: 0.8em;
+        color: $secondary-color;
+        cursor: pointer;
+    }
+
+    .login-btn {
+        width: 100%;
+        margin-top: 0.5rem;
+        font-size: 1rem;
+        border-radius: 0.3rem;
+        box-shadow: 0 0 4px 1px hsl(224, 91%, 90%);
+    }
+
+    .sign-up-section {
+        @include flex($pos: null, $gap: 0.7rem, $col: true);
+        align-items: center;
+
+        .github-btn {
+            @include flex($gap: 0.25rem);
+            height: 2.2rem;
+            color: black;
+            background-color: white;
+            border-color: black;
+            border-radius: 0.3rem;
+            transition: 0.2s ease-in-out;
+
+            &:hover,
+            &:focus {
+                color: white;
+                background-color: black;
+            }
+        }
+    }
+
+    .create-account {
+        margin-top: auto;
+
+        h5 {
+            font-weight: normal;
+        }
+
+        a {
+            color: $primary-color;
+            text-decoration: none;
+            font-weight: bold;
+
+            &:hover,
+            &:focus {
+                outline: none;
+                text-decoration: underline;
+            }
+        }
+    }
+}

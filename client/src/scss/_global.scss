@@ -5,5 +5,35 @@
 }
 
 body {
- font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #fafafa;
+    height: 100vh;
+}
+
+.btn {
+    color: white;
+    padding: 0.5em 1.5em;
+    font-weight: bold;
+    border: 2px solid $primary-color;
+    border-radius: 100vw;
+    background-color: $primary-color;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+
+    &.outline {
+        background: white;
+        color: $primary-color;
+    }
+
+    &:hover,
+    &:focus {
+        outline: none;
+        border-color: $secondary-color;
+        background-color: $secondary-color;
+
+        &.outline {
+            color: $secondary-color;
+            background-color: inherit;
+        }
+    }
 }
