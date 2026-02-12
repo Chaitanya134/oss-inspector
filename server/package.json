@@ -11,10 +11,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.27.2",
+    "axios": "^1.13.5",
     "cors": "^2.8.5",
     "dotenv": "^16.0.2",
-    "express": "^4.18.1",
+    "express": "^4.22.0",
     "mongoose": "^6.4.6"
   },
   "devDependencies": {
